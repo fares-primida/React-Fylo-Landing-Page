@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import './Mixens';
+
+
+
+$Raleway: 'Raleway', sans-serif;
+$Open-Sans: 'Open Sans', sans-serif;
+
+
+// Primary ==============================
+
+$Dark-Blue: hsl(217, 28%, 15%); 
+//  (intro and email sign up background)
+
+$Dark-Blue: hsl(218, 28%, 13%);
+//  (main background)
+
+
+$Dark-Blue-F: hsl(216, 53%, 9%);
+//  (footer background)
+
+
+$Dark-Blue: hsl(219, 30%, 18%);
+//  (testimonials background)
+
+
+
+
+// Accent ===============================
+
+$Cyan: hsl(176, 68%, 64%);
+//  (inside call-to-action gradient)
+
+
+$Blue: hsl(198, 60%, 50%);
+// (inside call-to-action gradient)
+
+
+$Light-Red: hsl(0, 100%, 63%);
+//  (error)
+
+
+
+
+// Neutral ===============================
+
+$White: hsl(0, 0%, 100%);
+
+
+
+
+
+
+
+.main-section {
+    @include Position-And-Size(relative , 100% , 100vh);
+    background-color: $Dark-Blue;
+    // Header =================================
+    .header {
+        @include Position-And-Size(default , 100% , 90px);
+        background-color: transparent;
+        .container {
+            @include Position-And-Size(default , 100% , 100%);
+            @include Center(flex , center , space-between);
+            padding: 0px 10px;
+            .logo {
+                @include Position-And-Size(default , 10% , 100%);
+                @include Center(flex , center , center);
+                img {
+                    width: 120px;
+                }
+            }
+            .pages {
+                @include Position-And-Size(default , 40% , 100%);
+                @include Center(flex , center , space-around);
+                p {
+                    font-family: $Open-Sans;
+                    color: $White;
+                    font-weight: 700;
+                    opacity: 0.5;
+                    cursor: pointer;
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    // Header End
+
+    .container {
+        @include Position-And-Size(default , 100% , 100%);
+        @include Grid(grid , 1fr , repeat(5 , auto));
+        .image {
+            @include Position-And-Size(default , 100% , 250px);
+            @include Center(flex , center , center);
+            img {
+                height: 100%;
+            }
+            z-index: 10;
+        }
+        .title {
+            @include Center(flex , center , center);
+            text-align: center;
+            h2 {
+                color: $White;
+                font-weight: 700;
+                font-family: $Raleway;
+            }
+            z-index: 10;
+        }
+        .description {
+            @extend .title;
+            p {
+                opacity: 0.6;
+                color: $White;
+                font-weight: 400;
+                font-family: $Open-Sans;
+            }
+        }
+        .btn {
+            @include Center(flex , center , center);
+            button {
+                @include Position-And-Size(default , 150px , 40px);
+                background-color: $Cyan;
+                border: 0;
+                border-radius: 15px;
+                color: $White;
+                font-weight: 700;
+                font-family: $Open-Sans;
+            }
+            z-index: 10;
+        }
+    }
+    .backImage {
+        @include Position-And-Size(absolute , 100% , fit-content);
+        bottom: 0;
+        img {
+            width: 100%;
+        }
+    }
+}
