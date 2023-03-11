@@ -185,3 +185,62 @@ $White: hsl(0, 0%, 100%);
         }
     }
 }
+
+
+
+
+
+//  Third Section
+
+.ThirdSection {
+    @include Position-And-Size(relative , 100% , 70vh);
+    background-color: $Dark-Blue-M;
+    @include Grid(grid , 1fr 1fr , 1fr);
+    .image {
+        @include Position-And-Size(relative , 100% , 100%);
+        @include Center(flex , center , center);
+        img {
+            position: absolute;
+            height: 100%;
+        }
+    }
+    .content {
+        @extend .image;
+        @include Grid(grid , 1fr , repeat(4 , auto));
+        .title {
+            font-family: $Raleway;
+            font-weight: 700;
+            color: $White;
+            font-size: 30px;
+        }
+        .desc1 {
+            font-family: $Open-Sans;
+            font-weight: 700;
+            color: $White;
+            opacity: 0.8;
+        }
+        .desc2 {
+            @extend .desc1;
+        }
+        .link {
+            span {
+                position: relative;
+                @extend .desc1;
+                color: $Cyan;
+                opacity: 1;
+                border-bottom: 2px solid $Cyan;
+                padding-right: 15px;
+                border-bottom-right-radius: 3px;
+                &::before {
+                    content: '';
+                    @include Position-And-Size(absolute , 10px , 10px);
+                    background-color: $Cyan;
+                    border-radius: 50%;
+                    top: 50%;
+                    right: -5%;
+                    transform : translate(-50% , -50%);
+                }
+            }
+        }
+    }
+}
