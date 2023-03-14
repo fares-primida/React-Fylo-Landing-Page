@@ -1,4 +1,5 @@
 import React from 'react'
+import FourSection from './components/FourSection'
 import MainSection from './components/MainSection'
 import SecondSection from './components/SecondSection'
 import ThirdSection from './components/ThirdSection'
@@ -10,6 +11,7 @@ const Project = () => {
             <MainSection />
             <SecondSection />
             <ThirdSection />
+            <FourSection />
         </div>
     )
 }

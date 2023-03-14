@@ -244,3 +244,66 @@ $White: hsl(0, 0%, 100%);
         }
     }
 }
+
+
+
+
+
+
+// Four Section
+
+.FourSection {
+    @include Position-And-Size(relative , 100% , 60vh);
+    background-color: $Dark-Blue-M;
+    @include Center(flex , center , center);
+    .container {
+        @include Position-And-Size(default , 90% , 90%);
+        @include Center(flex , center , center);
+        flex-wrap: wrap;
+        .card {
+            @include Position-And-Size(default , 360px , 200px);
+            background-color: $Dark-Blue;
+            border-radius: 10px;
+            @include Grid(grid , 1fr , 75% 25%);
+            padding: 10px;
+            margin: 15px;
+            .category {
+                @include Position-And-Size(default , 100% , 100%);
+                h3 {
+                    font-size: 15.5px;
+                    color: $White;
+                    font-family: $Open-Sans;
+                    font-weight: 700;
+                }
+            }
+            .person {
+                @include Position-And-Size(default , 100% , 100%);
+                @include Center(flex , center , start);
+                .image {
+                    @include Position-And-Size(default , 40px , 40px);
+                    border-radius: 50%;
+                    margin-right: 15px;
+                    img {
+                        width: 100%;
+                        border-radius: 50%;
+                    }
+                }
+                .info {
+                    h2 {
+                        font-size: 17px;
+                        font-family: $Raleway;
+                        font-weight: 700;
+                        color: $White;
+                    }
+                    h4 {
+                        font-size: 15px;
+                        font-family: $Open-Sans;
+                        font-weight: 700;
+                        color: $White;
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+    }
+}
