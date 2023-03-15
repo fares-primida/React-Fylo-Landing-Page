@@ -144,6 +144,29 @@ $White: hsl(0, 0%, 100%);
 }
 
 
+@media screen and (max-width: 376px) {
+    .main-section {
+        .header {
+            height: 80px;
+            .container {
+                padding: 0px 30px;
+                .logo {
+                    img {
+                        width: 80px;
+                    }
+                }
+                .pages {
+                    width: 60%;
+                    p {
+                        font-size: 14px;
+                    }
+                }
+            } 
+        }
+    }
+}
+
+
 
 
 
@@ -246,6 +269,25 @@ $White: hsl(0, 0%, 100%);
 }
 
 
+@media screen and (max-width: 376px) {
+    .ThirdSection {
+        @include Grid(grid , 1fr , afr 1fr);
+        .image {
+            grid-row: 1;
+        }
+        .content {
+            grid-row: 2;
+            .title {
+                font-size: 20px;
+                margin-bottom: 5px;
+            }
+            .desc1 {
+                font-size: 14px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
 
 
 
@@ -253,11 +295,11 @@ $White: hsl(0, 0%, 100%);
 // Four Section
 
 .FourSection {
-    @include Position-And-Size(relative , 100% , 60vh);
+    @include Position-And-Size(relative , 100% , fit-content);
     background-color: $Dark-Blue-M;
     @include Center(flex , center , center);
     .container {
-        @include Position-And-Size(default , 90% , 90%);
+        @include Position-And-Size(default , 90% , fit-content);
         @include Center(flex , center , center);
         flex-wrap: wrap;
         .card {
@@ -302,6 +344,101 @@ $White: hsl(0, 0%, 100%);
                         color: $White;
                         opacity: 0.7;
                     }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+// Five Section
+
+.FiveSection {
+    @include Position-And-Size(relative , 100% , 60vh);
+    @include Center(flex , center , center);
+    background-color: $Dark-Blue-M;
+    span {
+        @include Position-And-Size(absolute , 100% , 50%);
+        background-color: $Dark-Blue-F;
+        bottom: 0;
+    }
+    .container {
+        @include Position-And-Size(default , 850px , 250px);
+        background-color: $Dark-Blue-O;
+        @include Grid(grid , 1fr , repeat(3 , auto)); 
+        border-radius: 20px;
+        z-index: 10;
+        text-align: center;
+        .title {
+            @include Center(flex , center , center);
+            h2 {
+                font-family: $Raleway;
+                font-weight: 700;
+                color: $White;
+            }
+        }
+        .desc {
+            @include Center(flex , center , center);
+            p {
+                font-family: $Open-Sans;
+                font-weight: 700;
+                color: $White;
+            }
+        }
+        .btns {
+            @include Center(flex , center , space-around);
+            padding: 10px;
+            input {
+                @include Position-And-Size(default , 460px , 50px);
+                background-color: $White;
+                border: none;
+                border-radius: 30px;
+                padding: 10px;
+                color: #000;
+                font-family: $Raleway;
+                font-weight: 700;
+            }
+            button {
+                @include Position-And-Size(default , 180px , 40px);
+                border-radius: 25px;
+                border: none;
+                background: $Blue;
+                color: $White;
+                font-family: $Raleway;
+                font-weight: 700;
+                cursor: pointer;
+                &:hover {
+                    background-color: $Cyan;
+                } 
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 376px) {
+    .FiveSection {
+        .container {
+            width: 400px;
+            padding: 7px;
+            .title {
+                h2 {
+                    font-size: 20px;
+                }
+            }
+            .desc {
+                p {
+                    font-size: 14px;
+                }
+            }
+            .btns {
+                flex-wrap: wrap;
+                input {
+                    width: 300px;
+                    margin-bottom: 7px;
                 }
             }
         }

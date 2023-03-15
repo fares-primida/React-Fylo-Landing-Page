@@ -1,4 +1,5 @@
 import React from 'react'
+import FiveSection from './components/FiveSection'
 import FourSection from './components/FourSection'
 import MainSection from './components/MainSection'
 import SecondSection from './components/SecondSection'
@@ -12,6 +13,7 @@ const Project = () => {
             <SecondSection />
             <ThirdSection />
             <FourSection />
+            <FiveSection />
         </div>
     )
 }
