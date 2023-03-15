@@ -144,7 +144,7 @@ $White: hsl(0, 0%, 100%);
 }
 
 
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 470px) {
     .main-section {
         .header {
             height: 80px;
@@ -269,11 +269,14 @@ $White: hsl(0, 0%, 100%);
 }
 
 
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 470px) {
     .ThirdSection {
         @include Grid(grid , 1fr , afr 1fr);
         .image {
             grid-row: 1;
+            img {
+                width: 100%;
+            }
         }
         .content {
             grid-row: 2;
@@ -419,7 +422,7 @@ $White: hsl(0, 0%, 100%);
 
 
 
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 470px) {
     .FiveSection {
         .container {
             width: 400px;
@@ -439,6 +442,20 @@ $White: hsl(0, 0%, 100%);
                 input {
                     width: 300px;
                     margin-bottom: 7px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .FiveSection {
+        .container {
+            width: 500px;
+            .btns {
+                input {
+                    flex-wrap: wrap;
+                    width: 300px;
                 }
             }
         }

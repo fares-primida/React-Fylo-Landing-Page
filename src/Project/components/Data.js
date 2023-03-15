@@ -46,7 +46,7 @@ export const Profiles = [
     {
         category: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos modi laborum eos, consectetur cupiditate, exercitationem, quam hic aut quo minima repellat voluptatum enim tempora dolorem?',
         src: Profile3 ,
-        H2 : 'Zeyad Mostafa' , 
+        H2 : 'Sara Ali' , 
         H4 : 'Back End Developer'
     },
 ]
